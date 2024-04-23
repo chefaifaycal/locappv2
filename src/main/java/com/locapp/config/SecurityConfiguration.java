@@ -30,7 +30,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable) // Désactivation de la protection CSRF
                 .authorizeHttpRequests(request -> request.requestMatchers("/api/v1/auth/**")
-                        .permitAll().requestMatchers("/api/v1/annonces/**").authenticated().anyRequest().authenticated()) // Configuration des autorisations des requêtes HTTP
+                        .permitAll().requestMatchers("/api/v1/annonces/**").permitAll().anyRequest().authenticated()) // Configuration des autorisations des requêtes HTTP
                 .sessionManagement(manager -> manager.sessionCreationPolicy(STATELESS)) // Gestion de la session sans état
                 .authenticationProvider(authenticationProvider()) // Configuration du fournisseur d'authentification
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class); // Ajout du filtre JWT avant le filtre d'authentification par nom d'utilisateur/mot de passe

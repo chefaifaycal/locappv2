@@ -36,4 +36,8 @@ public class AnnonceService {
     public void deleteAnnonce(Long id) {
         annonceRepository.deleteById(id);
     }
+
+    public List<Annonce> getAnnoncesByUserId(Long userId) {
+        return annonceRepository.findByUserId(userId);
+    }
 }

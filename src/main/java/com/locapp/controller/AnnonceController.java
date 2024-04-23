@@ -39,4 +39,9 @@ public class AnnonceController {
     public void deleteAnnonce(@PathVariable Long id) {
         annonceService.deleteAnnonce(id);
     }
+
+    @GetMapping("/user/{userId}")
+    public List<Annonce> getAnnoncesByUserId(@PathVariable Long userId) {
+        return annonceService.getAnnoncesByUserId(userId);
+    }
 }
