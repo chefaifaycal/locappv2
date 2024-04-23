@@ -31,5 +31,5 @@ public class Annonce {
     private Date dateDisponibilite;
     private double prix;
     private boolean active;
-    private Long user_id;
+    private Long user;
 }
