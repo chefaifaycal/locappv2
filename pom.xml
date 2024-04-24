@@ -80,7 +80,21 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>4.24.0</version>
+                <configuration>
+                    <propertyFile>src/main/resources/db/changelog/db.changelog-master.yaml</propertyFile>
+                    <!-- Or specify directly -->
+                    <url>jdbc:postgresql://cb4l59cdg4fg1k.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/ddeejbk2at29c3</url>
+                    <username>u8mdmgjken1uao</username>
+                    <password>p9d3a92cef3520db52fc81608438869f953fec17d37283ca656cf631e2687479e</password>
+                </configuration>
+            </plugin>
         </plugins>
+
+
     </build>
 
 </project>

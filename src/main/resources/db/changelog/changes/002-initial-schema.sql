@@ -48,3 +48,9 @@ INSERT INTO annonce (titre, description_longue, description_courte, adresse, vil
                                                                                                                                                         ('Maison de ville à Sherbrooke', 'Maison de ville spacieuse avec jardin, trois chambres, salon, cuisine équipée et garage. Quartier familial et sécuritaire, proche des écoles et parcs.', '3 chambres, jardin, quartier familial', '3456 rue King Ouest, Sherbrooke, Québec, J1L 1P9', 'Sherbrooke', '5 1/2', 'Appartement', '2024-05-17', 1339.00, FALSE, 3);
 
 
+--changeset user:faycal
+-- Inserting annonces
+INSERT INTO annonce (titre, description_longue, description_courte, adresse, ville, grandeur, type_annonce, date_disponibilite, prix, active, user_id) VALUES
+
+                                                                                                                                                           ('Maison de ville à Sherbrooke', 'Maison de ville spacieuse avec jardin, trois chambres, salon, cuisine équipée et garage. Quartier familial et sécuritaire, proche des écoles et parcs.', '3 chambres, jardin, quartier familial', '3456 rue King Ouest, Sherbrooke, Québec, J1L 1P9', 'Sherbrooke', '5 1/2', 'Appartement', '2024-05-17', 1339.00, FALSE, 4);
+
